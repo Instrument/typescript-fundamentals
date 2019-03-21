@@ -1,3 +1,16 @@
+<table align="center">
+  <tr>
+    <td align="center">
+      ⚠️ <strong>A NOTE ABOUT VERSIONS</strong> ️️️⚠️
+    </td>
+  </tr>
+  <tr>
+    <td>
+      This branch is for the 1.x version of this workshop released in 2017 (for TypeScript 2.x). If you're looking for the 2.x workshop version, released in 2019 (for TypeScript 3.x) <a href="https://github.com/mike-works/typescript-fundamentals/tree/v2">click here</a>
+    </td>
+  </tr>
+</table>
+
 <p align='center'>
   <a href="https://mike.works" target='_blank'>
     <img height=40 src='https://assets.mike.works/img/login_logo-33a9e523d451fb0d902f73d5452d4a0b.png' />
@@ -12,7 +25,7 @@
   <a href="https://travis-ci.org/mike-works/typescript-fundamentals" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/typescript-fundamentals.svg?branch=solutions"/>
   </a>
-  <a href="https://github.com/mike-works/typescript-fundamentals/releases" title="Version">
+  <a href="https://img.shields.io/github/package-json/v/mike-works/typescript-fundamentals/master.svg" title="Version">
     <img title="Version" src="https://img.shields.io/github/tag/mike-works/typescript-fundamentals.svg" />
   </a>
 </p>
