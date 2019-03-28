@@ -4,25 +4,56 @@ interface Item {
     qty: number,
 }
 
-export function cashier() {
+interface Cart {
+    items: Item[],
+    length: number,
+    total: number,
+    add: (name: string, price: number, qty ?: number) => Cart,
+    addItem: (item: Item) => Cart,
+}
+
+export function cashier(): Cart {
+    let items: Item[] = [];
+    
     return {
-        length: 0,
-        total: 0,
+
         add(name: string, 
             price: number, 
             qty ?: number) { 
-                qty = qty || 1;
-                this.length += qty;
-                this.total += price * qty;
+                this.addItem({
+                    name: name,
+                    price: price,
+                    qty: qty || 1,
+                });
                 return this;
             },
+
         addItem(item: Item) {
-            return this.add(
-                item.name, 
-                item.price, 
-                item.qty
-            );
+            items.push(item);
+            return this;
+        },
+
+        get length() {
+            let qty_sum = 0;
+            for (let i=0; i<this.items.length; i++) {
+                qty_sum += this.items[i].qty;
+            }
+            return qty_sum;
+        },
+
+        get items() {
+            return items;
+        },
+
+        get total() {
+            let price_sum = 0;
+            for (let i=0; i<this.items.length; i++) {
+                price_sum += items[i].price * this.items[i].qty;
+
+            }
+            return price_sum;
         }
+
     }
 }
 
